@@ -17,7 +17,7 @@
     }
 
     .overlay {
-      background-color: rgba(0, 0, 0, 0.7); /* marco negro semi-transparente */
+      background-color: rgba(0, 0, 0, 0.7);
       min-height: 100vh;
       width: 100%;
       display: flex;
@@ -106,6 +106,23 @@
       </div>
     </div>
   </div>
+
+  <!-- Protección: bloquear clic derecho y F12 -->
+  <script>
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+
+    document.onkeydown = function (e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        return false;
+      }
+    };
+  </script>
 
 </body>
 </html>
