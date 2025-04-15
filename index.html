@@ -14,6 +14,7 @@
       background-repeat: no-repeat;
       background-position: center;
       background-attachment: fixed;
+      user-select: none;
     }
 
     .overlay {
@@ -40,6 +41,7 @@
       max-width: 100%;
       height: auto;
       margin-bottom: 20px;
+      pointer-events: none;
     }
 
     .blink {
@@ -73,9 +75,18 @@
       font-size: 14px;
       text-align: center;
     }
+
+    /* Extra bloqueo de selección y arrastre */
+    * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+    }
   </style>
 </head>
-<body>
+<body ondragstart="return false" onselectstart="return false">
 
   <div class="overlay">
     <div class="container">
@@ -107,7 +118,7 @@
     </div>
   </div>
 
-  <!-- Protección: bloquear clic derecho y F12 -->
+  <!-- Protección JS: Bloqueo de clic derecho, teclas y PrintScreen -->
   <script>
     document.addEventListener("contextmenu", function (e) {
       e.preventDefault();
@@ -117,19 +128,29 @@
       if (
         e.key === "F12" ||
         (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
-        (e.ctrlKey && e.key === "U")
+        (e.ctrlKey && e.key === "U") ||
+        (e.ctrlKey && e.key === "S")
       ) {
+        e.preventDefault();
         return false;
       }
     };
-    
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
+
+    // Bloqueo PrintScreen
+    document.addEventListener('keyup', function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
+
+    // Eliminación del código fuente visible en inspección
+    window.addEventListener('load', () => {
+      const fake = document.createElement('div');
+      fake.innerText = "Contenido protegido";
+      fake.style.display = "none";
+      document.body.appendChild(fake);
+    });
   </script>
 
 </body>
