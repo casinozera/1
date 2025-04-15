@@ -4,14 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CasinoZera - Plataforma Oficial</title>
-
   <style>
+    * {
+      user-select: none; /* 🔒 Bloqueo selección de texto */
+    }
+
     body {
       background-color: #f5f5f5;
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
     }
+
     .noti-box {
       background: #fff;
       border: 1px dashed #ccc;
@@ -24,6 +28,7 @@
       gap: 12px;
       animation: fadeIn 0.5s ease;
     }
+
     .noti-img {
       width: 50px;
       height: 50px;
@@ -31,23 +36,28 @@
       object-fit: cover;
       border: 2px solid #22c55e;
     }
+
     .noti-text {
       font-size: 14px;
       color: #111827;
     }
+
     .noti-text strong {
       color: #16a34a;
     }
+
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
     .main {
       max-width: 28rem;
       width: 100%;
       margin: 0 auto;
       padding: 1.5rem;
     }
+
     .box {
       background: white;
       border: 2px solid #22c55e;
@@ -55,19 +65,23 @@
       padding: 1.5rem;
       position: relative;
     }
+
     .logo {
       text-align: center;
       margin-bottom: 2rem;
     }
+
     .logo img {
       width: 200px;
       height: auto;
     }
+
     .dots {
       display: flex;
       justify-content: center;
       margin-top: 0.5rem;
     }
+
     .dots div {
       width: 1rem;
       height: 1rem;
@@ -76,27 +90,32 @@
       border-radius: 9999px;
       border: 1px solid #15803d;
     }
+
     .desc {
       text-align: center;
       margin-bottom: 1.5rem;
     }
+
     .desc h2 {
       font-size: 1.25rem;
       font-weight: 600;
       color: #374151;
       margin-bottom: 0.75rem;
     }
+
     .desc p {
       font-size: 2.25rem;
       font-weight: 700;
       color: #16a34a;
       margin-bottom: 1rem;
     }
+
     .btn-box {
       display: flex;
       justify-content: center;
       margin-bottom: 1.5rem;
     }
+
     .cta-button {
       background-color: #16a34a;
       color: white;
@@ -113,27 +132,33 @@
       transition: background-color 0.3s ease;
       box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     }
+
     .cta-button:hover {
       background-color: #15803d;
     }
+
     .info {
       text-align: center;
       color: #374151;
     }
+
     .info .min {
       font-size: 1.25rem;
       font-weight: 500;
     }
+
     .info .monto {
       font-size: 1.875rem;
       font-weight: 700;
       color: #22c55e;
       margin: 0.5rem 0;
     }
+
     .info .text-sm {
       font-size: 0.875rem;
       color: #6b7280;
     }
+
     footer {
       text-align: center;
       font-size: 0.875rem;
@@ -143,17 +168,13 @@
   </style>
 </head>
 
-<body>
+<body oncontextmenu="return false" oncopy="return false" onselectstart="return false">
 
   <main class="main">
     <div class="box">
       <div class="logo">
         <img src="https://casinozera.com/images/logo.png?v=1741793124" alt="CasinoZera Logo" />
-        <div class="dots">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
+        <div class="dots"><div></div><div></div><div></div></div>
       </div>
 
       <div class="desc">
@@ -177,51 +198,44 @@
     <div id="premios-section" class="mt-6"></div>
   </main>
 
-  <footer>
-    © 2024 CasinoZera. Todos los derechos reservados.
-  </footer>
+  <footer>© 2024 CasinoZera. Todos los derechos reservados.</footer>
 
-  <!-- Bloqueo de clic derecho y teclas de inspección -->
+  <!-- 🔒 Protección JS completa -->
   <script>
+    // Bloqueo clic derecho
     document.addEventListener("contextmenu", e => e.preventDefault());
 
+    // Bloqueo teclas de inspección
     document.addEventListener("keydown", function(e) {
       if (
         e.key === "F12" ||
-        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J" || e.key === "C")) ||
-        (e.ctrlKey && e.key === "U")
+        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+        (e.ctrlKey && e.key === 'U')
       ) {
         e.preventDefault();
         return false;
       }
     });
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
+
+    // Bloqueo PrintScreen
+    document.addEventListener('keyup', function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
+
+    // Bloqueo Copiar y Selección
+    document.addEventListener('copy', e => e.preventDefault());
+    document.addEventListener('selectstart', e => e.preventDefault());
   </script>
 
+  <!-- Simulador de notificaciones -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const section = document.getElementById("premios-section");
-
-      const nombres = ["Valentina Sosa", "Lucas Medina", "Martina Benítez", "Agustín Ríos", "Camila Duarte",
-      "Santiago Acosta", "Juana Herrera", "Lautaro Varela", "Mía Paredes", "Facundo Moyano",
-      "Isabela Leiva", "Benjamín Cardozo", "Emma Nuñez", "Thiago Cabrera", "Catalina Torres",
-      "Mateo Aguirre", "Renata Rojas", "Bruno Peralta", "Lucía Romero", "Tomás Farías",
-      "Olivia Giménez", "Franco Espinoza", "Antonella Vera", "Matías Soria", "Josefina Mansilla",
-      "Bautista Luna", "Malena Vargas", "Nicolás Ferreyra", "Julieta Barrios", "Gael Castaño"];
-
-      const ciudades = ["Buenos Aires", "Córdoba", "Rosario", "Mendoza", "Tucumán",
-      "La Plata", "Mar del Plata", "Salta", "Santa Fe", "Bahía Blanca",
-      "San Juan", "Resistencia", "Neuquén", "Santiago del Estero", "Corrientes",
-      "Paraná", "Formosa", "Posadas", "San Luis", "Comodoro Rivadavia",
-      "Río Cuarto", "San Rafael", "Trelew", "Rafaela", "Villa María",
-      "Catamarca", "San Fernando", "Pergamino", "Villa Carlos Paz", "Concordia"];
-
+      const nombres = ["Valentina Sosa", "Lucas Medina", "Martina Benítez", "Agustín Ríos", "Camila Duarte", "Santiago Acosta", "Juana Herrera", "Lautaro Varela", "Mía Paredes", "Facundo Moyano", "Isabela Leiva", "Benjamín Cardozo", "Emma Nuñez", "Thiago Cabrera", "Catalina Torres", "Mateo Aguirre", "Renata Rojas", "Bruno Peralta", "Lucía Romero", "Tomás Farías", "Olivia Giménez", "Franco Espinoza", "Antonella Vera", "Matías Soria", "Josefina Mansilla", "Bautista Luna", "Malena Vargas", "Nicolás Ferreyra", "Julieta Barrios", "Gael Castaño"];
+      const ciudades = ["Buenos Aires", "Córdoba", "Rosario", "Mendoza", "Tucumán", "La Plata", "Mar del Plata", "Salta", "Santa Fe", "Bahía Blanca", "San Juan", "Resistencia", "Neuquén", "Santiago del Estero", "Corrientes", "Paraná", "Formosa", "Posadas", "San Luis", "Comodoro Rivadavia", "Río Cuarto", "San Rafael", "Trelew", "Rafaela", "Villa María", "Catamarca", "San Fernando", "Pergamino", "Villa Carlos Paz", "Concordia"];
       const imagen = "http://imgfz.com/i/gG8bTM6.jpeg";
 
       function getRandom(arr) {
