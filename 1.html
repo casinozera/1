@@ -130,6 +130,25 @@
       }
     }
   </style>
+
+  <!-- Protección JS -->
+  <script>
+    // Bloquear botón derecho
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+
+    // Bloquear F12 y combinaciones
+    document.onkeydown = function (e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "C", "J"].includes(e.key)) ||
+        (e.ctrlKey && e.key === "U")
+      ) {
+        return false;
+      }
+    };
+  </script>
 </head>
 <body>
   <div class="container">
