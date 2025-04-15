@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienvenido al Casino</title>
+  <link rel="icon" href="https://casinozera.com/images/logo.png?v=1741793124" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Montserrat', sans-serif;
+      color: #fff;
+      background-image: url('https://i.postimg.cc/7LNK1RD8/Chat-GPT-Image-15-abr-2025-17-23-23.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .logo {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #FFD700;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .sub {
+      font-size: 1.8em;
+      margin: 30px 0 20px;
+      color: white;
+      font-weight: 700;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
+
+    .bono-btn {
+      background-color: #FFD700;
+      color: #000;
+      padding: 18px 40px;
+      border: none;
+      border-radius: 40px;
+      font-size: 1.4em;
+      font-weight: bold;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+      cursor: pointer;
+      animation: pulse 2s infinite ease-in-out;
+      transition: transform 0.3s ease;
+    }
+
+    .bono-btn:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+      50% { box-shadow: 0 0 30px rgba(255, 215, 0, 1); }
+      100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 12px;
+      color: #ccc;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2em; }
+      .sub { font-size: 1.4em; }
+      .bono-btn { font-size: 1.1em; padding: 15px 30px; }
+      .logo { width: 120px; }
+    }
+  </style>
+
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.addEventListener('keydown', function (e) {
+      if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I") || (e.ctrlKey && e.key === "u")) {
+        e.preventDefault();
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="overlay">
+    <img class="logo" src="https://casinozera.com/images/logo.png?v=1741793124" alt="Logo Casino" />
+    <h1>¡Bienvenido al Casino!</h1>
+    <p>Tu aventura comienza aquí</p>
+    <div class="sub">¡Oferta Especial de Bienvenida!</div>
+    <button class="bono-btn">BONO DEL 100%</button>
+    <div class="footer">© 2024 Ganemos. Todos los derechos reservados.</div>
+  </div>
+</body>
+</html>
