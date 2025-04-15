@@ -7,12 +7,14 @@
   <link rel="icon" href="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      user-select: none; /* 🔒 Bloqueo selección de texto */
     }
 
     body {
@@ -111,8 +113,9 @@
   </style>
 
   <script>
-    // 🔒 Bloqueo de F12, clic derecho y combinación de teclas
+    // 🔒 Bloqueo de F12, clic derecho y combinaciones
     document.addEventListener("contextmenu", e => e.preventDefault());
+
     document.addEventListener("keydown", e => {
       if (
         e.key === "F12" ||
@@ -123,15 +126,23 @@
         return false;
       }
     });
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
+
+    // 🔒 Bloqueo de Print Screen
+    document.addEventListener("keyup", function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
+
+    // 🔒 Bloqueo de copiar
+    document.addEventListener("copy", e => e.preventDefault());
+
+    // 🔒 Bloqueo de selección de texto
+    document.addEventListener("selectstart", e => e.preventDefault());
   </script>
 </head>
+
 <body>
   <section class="hero">
     <img src="https://casinozera.com/images/logo.png?v=1741793124" alt="Logo CasinoZera">
