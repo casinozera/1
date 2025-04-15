@@ -41,13 +41,6 @@
       margin-bottom: 20px;
     }
 
-    .highlight {
-      color: white;
-      font-size: 18px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
     .blink {
       animation: blink-animation 1s steps(2, start) infinite;
       -webkit-animation: blink-animation 1s steps(2, start) infinite;
@@ -59,29 +52,18 @@
       }
     }
 
-    .whatsapp-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background-color: #25D366;
-      color: white;
-      font-weight: bold;
-      padding: 12px 20px;
-      border-radius: 50px;
-      font-size: 16px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    .whatsapp-img-btn {
+      background: none;
+      border: none;
+      padding: 0;
       margin-bottom: 20px;
+      cursor: pointer;
     }
 
-    .whatsapp-btn:hover {
-      background-color: #1ebe5b;
-    }
-
-    .whatsapp-btn img {
-      width: 20px;
-      height: 20px;
+    .whatsapp-img-btn img {
+      width: 260px;
+      height: auto;
+      display: block;
     }
 
     .legal {
@@ -100,7 +82,7 @@
 
       <img src="https://royalblue-yak-608837.hostingersite.com/wp-content/uploads/2025/04/2-removebg-preview.png" alt="Logo 2" />
 
-      <a class="whatsapp-btn" href="#" onclick="
+      <button class="whatsapp-img-btn" onclick="
         const links = [
           'https://wa.link/az8acg',
           'https://wa.link/2r8qtg'
@@ -109,11 +91,10 @@
         window.open(link, '_blank');
         return false;
       ">
-        <img src="https://royalblue-yak-608837.hostingersite.com/wp-content/uploads/2025/04/733585.png" alt="WhatsApp" />
-        Chatear por WhatsApp
-      </a>
+        <img src="https://i.postimg.cc/Xvv1Xc7s/boton-wpp.png" alt="Chatear por WhatsApp" />
+      </button>
 
-      <div class="highlight blink">
+      <div class="blink">
         <img src="https://royalblue-yak-608837.hostingersite.com/wp-content/uploads/2025/04/O-removebg-preview-1.png" alt="Icono extra" />
       </div>
 
