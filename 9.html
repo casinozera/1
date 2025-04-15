@@ -86,7 +86,7 @@
     .footer-img {
       width: 100%;
       max-width: 500px;
-      margin-bottom: 10px; /* bajado medio centímetro */
+      margin-bottom: 10px;
       margin-top: 10px;
       box-shadow: 0 0 20px 3px #00ff5e;
       border-radius: 10px;
@@ -128,21 +128,13 @@
       }
     };
 
-    // 🔒 Prevención de PrintScreen (opcional)
+    // 🔒 Bloqueo Print Screen
     document.addEventListener('keyup', function(e) {
       if (e.key === "PrintScreen") {
         navigator.clipboard.writeText('');
         alert("Captura bloqueada.");
       }
     });
-
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
   </script>
 
 </head>
