@@ -104,7 +104,8 @@
     }
   </style>
 </head>
-<body>
+<body oncontextmenu="return false">
+
   <div class="container">
     <img src="https://casinozera.com/images/logo.png?v=1741793124" alt="Logo CasinoZera" class="logo">
 
@@ -139,6 +140,18 @@
       const numeroElegido = numeros[Math.floor(Math.random() * numeros.length)];
       window.location.href = `https://wa.me/${numeroElegido}?text=${mensaje}`;
     }
+
+    // Protección: Bloquea F12, Ctrl+Shift+I, Ctrl+U, etc.
+    document.addEventListener('keydown', function (e) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+        (e.ctrlKey && e.key === 'U')
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    });
   </script>
 </body>
 </html>
