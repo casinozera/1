@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatear por WhatsApp</title>
+  <link rel="icon" href="https://web.whatsapp.com/img/favicon/1x/favicon.png" />
+  <meta name="description" content="Comenzá a chatear con nosotros por WhatsApp de forma directa.">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', 'Helvetica', 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e5ddd5, #ffffff);
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .whatsapp-box {
+      background: linear-gradient(135deg, #ffffff, #f3f3f3);
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      max-width: 420px;
+      width: 100%;
+      height: 560px;
+      text-align: center;
+      padding: 50px;
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+      box-sizing: border-box;
+    }
+
+    .whatsapp-box img {
+      width: 80px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .whatsapp-box h1 {
+      font-size: 30px;
+      color: #075e54;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .whatsapp-box .verified {
+      font-size: 16px;
+      color: #4caf50;
+      margin-bottom: 25px;
+      font-style: italic;
+    }
+
+    .whatsapp-box p {
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      background-color: #25D366;
+      color: white;
+      padding: 20px 50px;
+      font-size: 22px;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      animation: buttonBounce 1.5s infinite;
+    }
+
+    .btn:hover {
+      background-color: #1EBE57;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #666;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .whatsapp-box {
+        height: 520px;
+        padding: 30px;
+      }
+
+      .whatsapp-box img {
+        width: 70px;
+        margin-bottom: 15px;
+      }
+
+      .whatsapp-box h1 {
+        font-size: 26px;
+      }
+
+      .whatsapp-box .verified {
+        font-size: 15px;
+      }
+
+      .whatsapp-box p {
+        font-size: 16px;
+      }
+
+      .btn {
+        padding: 18px 40px;
+        font-size: 20px;
+      }
+    }
+
+    @keyframes buttonBounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="whatsapp-box">
+      <img src="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" alt="WhatsApp">
+      <h1>Chateá con nosotros</h1>
+      <div class="verified">Verificado por WhatsApp</div>
+      <p style="font-size: 22px; color: #075e54; font-weight: bold; margin: 20px 0;">
+        🎰100% DE BONIFICACIÓN🎰
+      </p>
+      <p>Hacé clic en el botón para iniciar la conversación.</p>
+      <a 
+        href="https://wa.me/5491136933978?text=Hola,%20quiero%20mi%20usuario%20con%20mi%20bono%20de%20bienvenida!" 
+        target="_blank" 
+        class="btn">
+        Chatear por WhatsApp
+      </a>
+    </div>
+    <div class="footer">
+      WhatsApp Inc. no almacena tu historial con terceros.
+    </div>
+  </div>
+</body>
+</html>
