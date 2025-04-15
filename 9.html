@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CasinoZera | Tu Usuario</title>
+  <link rel="icon" href="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" type="image/jpeg" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: url('https://i.postimg.cc/tJXg8Ynm/mejores-casinos-online-chile.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .logo {
+      margin-top: 40px;
+      width: 200px;
+    }
+
+    .text {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .text h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    .text h3 {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    .btn-wsp {
+      background-color: #1dd661;
+      color: #000;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn-wsp img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .btn-wsp:hover {
+      background-color: #17b154;
+    }
+
+    .bonus {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+
+    .footer-img {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 10px; /* bajado medio centímetro */
+      margin-top: 10px;
+      box-shadow: 0 0 20px 3px #00ff5e;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .text h2 {
+        font-size: 1.1rem;
+      }
+
+      .text h3 {
+        font-size: 1rem;
+      }
+
+      .btn-wsp {
+        font-size: 1rem;
+        padding: 12px 24px;
+      }
+
+      .bonus {
+        font-size: 1.8rem;
+      }
+
+      .footer-img {
+        max-width: 90vw;
+      }
+    }
+  </style>
+
+  <!-- 🔒 BLOQUEOS DE INSPECCIÓN -->
+  <script>
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    document.onkeydown = function(e) {
+      if (e.key === "F12" || 
+         (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+         (e.ctrlKey && (e.key === "U" || e.key === "S"))) {
+        return false;
+      }
+    };
+
+    // 🔒 Prevención de PrintScreen (opcional)
+    document.addEventListener('keyup', function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
+  </script>
+
+</head>
+<body>
+  <div class="container">
+    <img class="logo" src="https://casinozera.com/images/logo.png?v=1741793124" alt="CasinoZera Logo">
+    
+    <div class="text">
+      <h2>PARA CREAR TU CUENTA</h2>
+      <h3>👇HAZ CLIC EN EL BOTÓN👇</h3>
+      <a href="https://wa.link/ejemplo" class="btn-wsp">
+        <img src="https://i.postimg.cc/Y2b2h2WM/Dise-o-sin-t-tulo-12.png" alt="WhatsApp Icon">
+        QUIERO MI USU4RIO
+      </a>
+      <div class="bonus">🤑 BONO SORPRESA 100% 🤑</div>
+    </div>
+
+    <img class="footer-img" src="https://i.postimg.cc/tCQknyQv/Agregar-un-titulo-Logos.png" alt="Beneficios">
+  </div>
+</body>
+</html>
