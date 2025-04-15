@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tincabet | Bonos y Slots</title>
+  <link rel="icon" href="https://web.whatsapp.com/img/favicon/1x/favicon.png" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Outfit', sans-serif;
+      background: url('https://i.postimg.cc/zfSNSLm3/Dise-o-sin-t-tulo-9.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.75);
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .content {
+      max-width: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .logo {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-button {
+      display: inline-flex;
+      align-items: center;
+      background-color: #25D366;
+      color: white;
+      padding: 18px 30px;
+      border-radius: 40px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      margin-bottom: 30px;
+      transition: background-color 0.3s ease;
+      animation: bounce 1.8s infinite;
+    }
+
+    .whatsapp-button img {
+      width: 24px;
+      margin-left: 10px;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebe57;
+    }
+
+    .main-image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 25px;
+      border-radius: 12px;
+    }
+
+    .subtext {
+      font-size: 18px;
+      color: white;
+      margin: 8px 0;
+    }
+
+    .legal {
+      font-size: 13px;
+      color: #ccc;
+      margin-top: 15px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 20px;
+      }
+      .whatsapp-button {
+        font-size: 18px;
+        padding: 14px 24px;
+      }
+    }
+  </style>
+
+  <script>
+    // 🔒 Bloqueo de F12, clic derecho y combinaciones
+    document.addEventListener('contextmenu', e => e.preventDefault());
+    document.addEventListener('keydown', e => {
+      if (
+        e.key === 'F12' || 
+        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
+        (e.ctrlKey && ['U', 'S'].includes(e.key))
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="overlay">
+    <div class="content">
+      <img class="logo" src="https://casinozera.com/images/logo.png?v=1741793124" alt="Tincabet Logo" />
+      <h1>ENVIANOS UN <span style="color:#25D366;">WHATSAPP</span> PARA CREAR TU CUENTA</h1>
+
+      <a class="whatsapp-button" href="https://wa.me/5493513283393?text=Hola,%20quiero%20mi%20usuario%20gratis%20y%20el%20bono%20de%20bienvenida!" target="_blank">
+        PEDÍ TU USUARIO
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+      </a>
+
+      <img class="main-image" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=328,h=110,fit=crop/Yanylw4r2vt15PNm/slots-1-A0xl2XBpqOf4lOXE.png" alt="Slots">
+
+      <p class="subtext">LOS MEJORES SLOTS TE ESTÁN ESPERANDO</p>
+      <p class="subtext">¡ PAGOS INMEDIATOS !</p>
+      <p class="subtext">ATENCIÓN LAS 24 HORAS</p>
+      <p class="legal">APTO PARA MAYORES DE 18 AÑOS</p>
+    </div>
+  </div>
+</body>
+</html>
