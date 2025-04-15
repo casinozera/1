@@ -13,6 +13,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
+      user-select: none; /* 🔒 Evita selección de texto */
     }
 
     body {
@@ -107,29 +108,43 @@
   </style>
 
   <script>
-    // Bloqueos de click derecho, F12, inspección y otros
+    // 🔒 Bloqueos generales
     document.addEventListener("contextmenu", e => e.preventDefault());
+
     document.addEventListener("keydown", e => {
       if (
         e.key === "F12" ||
         (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
-        (e.ctrlKey && e.key === "U")
+        (e.ctrlKey && ["U", "S", "C"].includes(e.key))
       ) {
         e.preventDefault();
+        return false;
       }
     });
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
+
+    // 🔒 Bloqueo de PrintScreen
+    document.addEventListener('keyup', function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
+
+    // 🔒 Bloqueo copiar texto
+    document.addEventListener("copy", function(e) {
+      e.preventDefault();
+      return false;
+    });
+
+    // 🔒 Bloqueo selección de texto
+    document.addEventListener("selectstart", function(e) {
+      e.preventDefault();
+      return false;
+    });
   </script>
 </head>
 
 <body>
-
   <div class="container">
     <div class="logo">
       <img src="https://casinozera.com/images/logo.png?v=1741793124" alt="Logo GANAMOS">
@@ -153,10 +168,9 @@
       </ul>
       <div class="warning">
         ❌ PROHIBIDO PARA MENORES DE 18 AÑOS ❌<br>
-        El juego conlleva riesgos financieros. Juega con responsabilidad.
+        El juego conlleva riesgos financieros. Juga con responsabilidad.
       </div>
     </div>
   </div>
-
 </body>
 </html>
