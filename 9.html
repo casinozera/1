@@ -135,6 +135,14 @@
         alert("Captura bloqueada.");
       }
     });
+
+     // 🔒 BLOQUEO DE PRINT SCREEN
+  document.addEventListener('keyup', function(e) {
+    if (e.key === "PrintScreen") {
+      navigator.clipboard.writeText('');
+      alert("Captura bloqueada.");
+    }
+  });
   </script>
 
 </head>
