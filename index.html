@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sbplay.site</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .container img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .blink {
+      animation: blink-animation 1s steps(2, start) infinite;
+      -webkit-animation: blink-animation 1s steps(2, start) infinite;
+    }
+
+    @keyframes blink-animation {
+      to {
+        visibility: hidden;
+      }
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: #25D366;
+      color: white;
+      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5b;
+    }
+
+    .whatsapp-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .legal {
+      margin-top: 30px;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="https://casinozera.com/images/logo.png?v=1741793124" alt="Logo CasinoZera" />
+
+    <img src="https://royalblue-yak-608837.hostingersite.com/wp-content/uploads/2025/04/2-removebg-preview.png" alt="Logo 2" />
+
+    <a class="whatsapp-btn" href="#" onclick="
+      const links = [
+        'https://wa.link/az8acg',
+        'https://wa.link/2r8qtg'
+      ];
+      const link = links[Math.floor(Math.random() * links.length)];
+      window.open(link, '_blank');
+      return false;
+    ">
+      <img src="https://royalblue-yak-608837.hostingersite.com/wp-content/uploads/2025/04/733585.png" alt="WhatsApp" />
+      Chatear por WhatsApp
+    </a>
+
+    <div class="highlight blink"><img src="https://royalblue-yak-608837.hostingersite.com/wp-content/uploads/2025/04/O-removebg-preview-1.png" alt="Icono extra" /></div>
+
+   <img src="https://royalblue-yak-608837.hostingersite.com/wp-content/uploads/2025/04/Agregar_un_titulo-removebg-preview.png" alt="Texto final" />
+
+    <div class="legal">
+      Jugar compulsivamente es perjudicial para la salud. Prohibido el juego de azar a menores de 18 años.
+    </div>
+  </div>
+
+</body>
+</html>
