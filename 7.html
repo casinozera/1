@@ -11,6 +11,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      user-select: none; /* 🔒 Bloqueo de selección */
     }
 
     body, html {
@@ -99,21 +100,43 @@
   </style>
 
   <script>
-    document.addEventListener('contextmenu', event => event.preventDefault());
+    // 🔒 Bloqueo de clic derecho
+    document.addEventListener('contextmenu', e => e.preventDefault());
+
+    // 🔒 Bloqueo de teclas para inspección y copiar código
     document.addEventListener('keydown', function (e) {
-      if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I") || (e.ctrlKey && e.key === "u")) {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+        (e.ctrlKey && ["U", "S", "C"].includes(e.key))
+      ) {
         e.preventDefault();
+        return false;
       }
     });
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
+
+    // 🔒 Bloqueo Print Screen
+    document.addEventListener('keyup', function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
+
+    // 🔒 Bloqueo copiar texto
+    document.addEventListener("copy", function(e) {
+      e.preventDefault();
+      return false;
+    });
+
+    // 🔒 Bloqueo selección de texto (extra por seguridad)
+    document.addEventListener("selectstart", function(e) {
+      e.preventDefault();
+      return false;
+    });
   </script>
 </head>
+
 <body>
   <div class="overlay">
     <img class="logo" src="https://casinozera.com/images/logo.png?v=1741793124" alt="Logo Casino" />
