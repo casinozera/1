@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juga con CasinoZera</title>
+  <link rel="icon" href="https://web.whatsapp.com/img/favicon/1x/favicon.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero {
+      height: 100vh;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                  url('https://i.postimg.cc/9QZTZq2v/pngtree-casino-pieces-with-neon-light-effects-that-sparkle-and-glow-are-image-16343712.jpg')
+                  no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .hero img {
+      width: 150px;
+      margin-bottom: 20px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      font-weight: bold;
+      color: #FFD700;
+      text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin: 15px 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .cta-button {
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #aa33ff, #ff00cc);
+      color: #fff;
+      padding: 20px 40px;
+      border-radius: 10px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 18px rgba(184, 0, 255, 0.9);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .cta-button i {
+      margin-right: 15px;
+      font-size: 1.8em;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px rgba(184, 0, 255, 1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .info {
+      background: #1a1a1a;
+      padding: 50px 20px;
+    }
+
+    .info h2 {
+      font-size: 2em;
+      color: #FFD700;
+    }
+
+    .info p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                    url('https://i.postimg.cc/pdvjZXXy/Dise-o-sin-t-tulo-10.png') no-repeat center center/cover;
+      }
+
+      .hero img {
+        width: 120px;
+      }
+    }
+  </style>
+
+  <script>
+    // 🔒 Bloqueo de F12, clic derecho y combinación de teclas
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("keydown", e => {
+      if (
+        e.key === "F12" ||
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+        (e.ctrlKey && ["U", "S"].includes(e.key))
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    });
+  </script>
+</head>
+<body>
+  <section class="hero">
+    <img src="https://casinozera.com/images/logo.png?v=1741793124" alt="Logo Ganemos">
+    <h1>Juga con Ganemos</h1>
+    <p>Para crear tu cuenta, envíanos un WhatsApp haciendo click en el botón de abajo</p>
+    <a href="https://api.whatsapp.com/send?phone=5491130550463&text=¡Buenas!%20Me%20gustaría%20crear%20un%20usuario.%20Mi%20nombre%20es:"
+       class="cta-button" target="_blank">
+      <i class='fab fa-whatsapp'></i> ¡Crea tu usuario!
+    </a>
+  </section>
+
+  <section class="info">
+    <h2>Beneficios Exclusivos</h2>
+    <p>Recibe bonos de bienvenida y promociones especiales.</p>
+    <p>Mínimo de carga: $1000</p>
+  </section>
+</body>
+</html>
