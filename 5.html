@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CasinoZera | Bonos y Slots</title>
   <link rel="icon" href="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" />
-
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" />
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      user-select: none; /* 🔒 Bloqueo selección de texto */
     }
 
     body, html {
@@ -110,6 +111,7 @@
       h1 {
         font-size: 20px;
       }
+
       .whatsapp-button {
         font-size: 18px;
         padding: 14px 24px;
@@ -118,11 +120,12 @@
   </style>
 
   <script>
-    // 🔒 Bloqueo de F12, clic derecho y combinaciones
-    document.addEventListener('contextmenu', e => e.preventDefault());
-    document.addEventListener('keydown', e => {
+    // 🔒 BLOQUEO COMPLETO DE FUNCIONES DE INSPECCIÓN Y COPIA
+    document.addEventListener("contextmenu", e => e.preventDefault());
+
+    document.addEventListener("keydown", function(e) {
       if (
-        e.key === 'F12' || 
+        e.key === "F12" ||
         (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
         (e.ctrlKey && ['U', 'S'].includes(e.key))
       ) {
@@ -130,15 +133,19 @@
         return false;
       }
     });
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
+
+    document.addEventListener("keyup", function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
+
+    document.addEventListener("copy", e => e.preventDefault());
+    document.addEventListener("selectstart", e => e.preventDefault());
   </script>
 </head>
+
 <body>
   <div class="overlay">
     <div class="content">
@@ -150,7 +157,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
       </a>
 
-      <img class="main-image" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=328,h=110,fit=crop/Yanylw4r2vt15PNm/slots-1-A0xl2XBpqOf4lOXE.png" alt="Slots">
+      <img class="main-image" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=328,h=110,fit=crop/Yanylw4r2vt15PNm/slots-1-A0xl2XBpqOf4lOXE.png" alt="Slots" />
 
       <p class="subtext">LOS MEJORES SLOTS TE ESTÁN ESPERANDO</p>
       <p class="subtext">¡ PAGOS INMEDIATOS !</p>
