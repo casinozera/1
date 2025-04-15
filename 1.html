@@ -12,6 +12,7 @@
       padding: 0;
       font-family: 'Segoe UI', 'Helvetica', 'Roboto', sans-serif;
       background: linear-gradient(135deg, #e5ddd5, #ffffff);
+      user-select: none;
     }
 
     .container {
@@ -42,6 +43,7 @@
       margin-bottom: 20px;
       border-radius: 50%;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      pointer-events: none;
     }
 
     .whatsapp-box h1 {
@@ -122,23 +124,27 @@
     }
 
     @keyframes buttonBounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-5px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    * {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
     }
   </style>
 
   <!-- Protección JS -->
   <script>
-    // Bloquear botón derecho
+    // 🔒 Bloquear botón derecho
     document.addEventListener("contextmenu", function (e) {
       e.preventDefault();
     });
 
-    // Bloquear F12 y combinaciones
+    // 🔒 Bloquear teclas F12, Ctrl+U, Ctrl+Shift+I/J/C
     document.onkeydown = function (e) {
       if (
         e.key === "F12" ||
@@ -148,16 +154,25 @@
         return false;
       }
     };
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
+
+    // 🔒 BLOQUEO DE PRINT SCREEN
+    document.addEventListener('keyup', function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
+
+    // 🔒 Ocultamiento de código al cargar
+    window.addEventListener('load', () => {
+      const fake = document.createElement('div');
+      fake.innerText = "Contenido protegido";
+      fake.style.display = "none";
+      document.body.appendChild(fake);
+    });
   </script>
 </head>
-<body>
+<body ondragstart="return false" onselectstart="return false">
   <div class="container">
     <div class="whatsapp-box">
       <img src="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" alt="WhatsApp">
