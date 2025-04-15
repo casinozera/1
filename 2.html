@@ -135,30 +135,31 @@
         "5491168348210",
         "5491168363736"
       ];
-
       const mensaje = encodeURIComponent("Hola 463, estoy interesado en el B0no del 200%");
       const numeroElegido = numeros[Math.floor(Math.random() * numeros.length)];
       window.location.href = `https://wa.me/${numeroElegido}?text=${mensaje}`;
     }
 
-    // Protección: Bloquea F12, Ctrl+Shift+I, Ctrl+U, etc.
-    document.addEventListener('keydown', function (e) {
+    // 🔐 Bloqueo de herramientas de inspección
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("keydown", function(e) {
       if (
         e.key === "F12" ||
-        (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key)) ||
-        (e.ctrlKey && e.key === 'U')
+        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key)) ||
+        (e.ctrlKey && e.key === "U")
       ) {
         e.preventDefault();
         return false;
       }
     });
-     // 🔒 BLOQUEO DE PRINT SCREEN
-  document.addEventListener('keyup', function(e) {
-    if (e.key === "PrintScreen") {
-      navigator.clipboard.writeText('');
-      alert("Captura bloqueada.");
-    }
-  });
+
+    // 🔒 Bloqueo de PrintScreen
+    document.addEventListener('keyup', function(e) {
+      if (e.key === "PrintScreen") {
+        navigator.clipboard.writeText('');
+        alert("Captura bloqueada.");
+      }
+    });
   </script>
 </body>
 </html>
