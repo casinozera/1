@@ -6,6 +6,25 @@
   <title>Chatear por WhatsApp</title>
   <link rel="icon" href="https://web.whatsapp.com/img/favicon/1x/favicon.png" />
   <meta name="description" content="Comenzá a chatear con nosotros por WhatsApp de forma directa.">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1462345621814719');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     body {
       margin: 0;
@@ -139,12 +158,10 @@
 
   <!-- Protección JS -->
   <script>
-    // 🔒 Bloquear botón derecho
     document.addEventListener("contextmenu", function (e) {
       e.preventDefault();
     });
 
-    // 🔒 Bloquear teclas F12, Ctrl+U, Ctrl+Shift+I/J/C
     document.onkeydown = function (e) {
       if (
         e.key === "F12" ||
@@ -155,7 +172,6 @@
       }
     };
 
-    // 🔒 BLOQUEO DE PRINT SCREEN
     document.addEventListener('keyup', function(e) {
       if (e.key === "PrintScreen") {
         navigator.clipboard.writeText('');
@@ -163,7 +179,6 @@
       }
     });
 
-    // 🔒 Ocultamiento de código al cargar
     window.addEventListener('load', () => {
       const fake = document.createElement('div');
       fake.innerText = "Contenido protegido";
@@ -183,8 +198,9 @@
       </p>
       <p>Hacé clic en el botón para iniciar la conversación.</p>
       <a 
-        href="https://wa.me/5491136933978?text=Hola,%20quiero%20mi%20usuario%20con%20mi%20bono%20de%20bienvenida!" 
-        target="_blank" 
+        href="https://wa.link/landingtwo"
+        onclick="fbq('track', 'Contact');"
+        target="_blank"
         class="btn">
         Chatear por WhatsApp
       </a>
