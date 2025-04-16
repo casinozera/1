@@ -5,13 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landing Page - BONUS DE BIENVENIDA</title>
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1462345621814719');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      user-select: none; /* ⛔ Evita selección de texto */
+      user-select: none;
     }
 
     body {
@@ -95,27 +113,28 @@
 </head>
 <body oncontextmenu="return false">
 
-  <!-- Contenido principal -->
   <div class="container">
     <img src="https://casinozera.com/images/logo.png?v=1741793124" alt="CasinoZera Logo" class="CasinoZera-Logo">
     <h1>🎰BONUS DEL 100% ACTIVO 🎰</h1>
     <p>🏆 Encontrá los mejores Sl0ts y atención 24 horas 🏆</p>
-    <a href="https://wa.link/bconline" class="cta-button" target="_blank">CHATEAR EN WHATSAPP</a>
+    <a href="https://wa.link/bconline" 
+       class="cta-button" 
+       target="_blank" 
+       onclick="fbq('track', 'Contact');">
+       CHATEAR EN WHATSAPP
+    </a>
   </div>
 
-  <!-- Barra inferior fija -->
   <div class="bono-bar">
     🎁Tu usuario GRATIS y al instante🎁
   </div>
 
-  <!-- Pie de página -->
   <footer>
     BC Online todos los derechos reservados.
   </footer>
 
   <!-- 🔒 Protección JS -->
   <script>
-    // Bloqueo de teclas para inspección
     document.addEventListener('keydown', function (e) {
       if (
         e.key === "F12" ||
@@ -127,7 +146,6 @@
       }
     });
 
-    // Bloqueo PrintScreen
     document.addEventListener('keyup', function(e) {
       if (e.key === "PrintScreen") {
         navigator.clipboard.writeText('');
@@ -135,18 +153,15 @@
       }
     });
 
-    // Bloqueo Copiar
     document.addEventListener('copy', function (e) {
       e.preventDefault();
       alert("Copiar deshabilitado");
     });
 
-    // Bloqueo Selección con mouse
     document.addEventListener('selectstart', function (e) {
       e.preventDefault();
     });
 
-    // Bloqueo clic derecho (por si no estaba activado)
     document.addEventListener('contextmenu', function (e) {
       e.preventDefault();
     });
