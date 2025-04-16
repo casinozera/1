@@ -6,12 +6,31 @@
   <title>Bienvenido al Casino</title>
   <link rel="icon" href="https://casinozera.com/images/logo.png?v=1741793124" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1462345621814719');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      user-select: none; /* 🔒 Bloqueo de selección */
+      user-select: none;
     }
 
     body, html {
@@ -72,6 +91,8 @@
       cursor: pointer;
       animation: pulse 2s infinite ease-in-out;
       transition: transform 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .bono-btn:hover {
@@ -100,10 +121,8 @@
   </style>
 
   <script>
-    // 🔒 Bloqueo de clic derecho
     document.addEventListener('contextmenu', e => e.preventDefault());
 
-    // 🔒 Bloqueo de teclas para inspección y copiar código
     document.addEventListener('keydown', function (e) {
       if (
         e.key === "F12" ||
@@ -115,7 +134,6 @@
       }
     });
 
-    // 🔒 Bloqueo Print Screen
     document.addEventListener('keyup', function(e) {
       if (e.key === "PrintScreen") {
         navigator.clipboard.writeText('');
@@ -123,13 +141,11 @@
       }
     });
 
-    // 🔒 Bloqueo copiar texto
     document.addEventListener("copy", function(e) {
       e.preventDefault();
       return false;
     });
 
-    // 🔒 Bloqueo selección de texto (extra por seguridad)
     document.addEventListener("selectstart", function(e) {
       e.preventDefault();
       return false;
@@ -143,7 +159,12 @@
     <h1>¡Bienvenido al Casino!</h1>
     <p>Tu aventura comienza aquí</p>
     <div class="sub">¡Oferta Especial de Bienvenida!</div>
-    <button class="bono-btn">BONO DEL 100%</button>
+    <a class="bono-btn" 
+       href="https://wa.link/landingeight" 
+       target="_blank" 
+       onclick="fbq('track', 'Contact');">
+       BONO DEL 100%
+    </a>
     <div class="footer">© 2024 Ganemos. Todos los derechos reservados.</div>
   </div>
 </body>
