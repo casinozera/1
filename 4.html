@@ -4,9 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CasinoZera - Plataforma Oficial</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1462345621814719');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * {
-      user-select: none; /* 🔒 Bloqueo selección de texto */
+      user-select: none;
     }
 
     body {
@@ -183,7 +202,11 @@
       </div>
 
       <div class="btn-box">
-        <a href="https://wa.me/5491176157880?text=Hola,+quiero+crear+mi+cuenta+en+BTLU1" class="cta-button" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.link/landingfive"
+           class="cta-button"
+           target="_blank"
+           rel="noopener noreferrer"
+           onclick="fbq('track', 'Contact');">
           📲 Crear cuenta por WhatsApp
         </a>
       </div>
@@ -200,12 +223,10 @@
 
   <footer>© 2024 CasinoZera. Todos los derechos reservados.</footer>
 
-  <!-- 🔒 Protección JS completa -->
+  <!-- Protección -->
   <script>
-    // Bloqueo clic derecho
     document.addEventListener("contextmenu", e => e.preventDefault());
 
-    // Bloqueo teclas de inspección
     document.addEventListener("keydown", function(e) {
       if (
         e.key === "F12" ||
@@ -217,7 +238,6 @@
       }
     });
 
-    // Bloqueo PrintScreen
     document.addEventListener('keyup', function(e) {
       if (e.key === "PrintScreen") {
         navigator.clipboard.writeText('');
@@ -225,7 +245,6 @@
       }
     });
 
-    // Bloqueo Copiar y Selección
     document.addEventListener('copy', e => e.preventDefault());
     document.addEventListener('selectstart', e => e.preventDefault());
   </script>
