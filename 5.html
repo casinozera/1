@@ -7,12 +7,30 @@
   <link rel="icon" href="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" />
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1462345621814719');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      user-select: none; /* 🔒 Bloqueo selección de texto */
+      user-select: none;
     }
 
     body, html {
@@ -152,7 +170,10 @@
       <img class="logo" src="https://casinozera.com/images/logo.png?v=1741793124" alt="Tincabet Logo" />
       <h1>ENVIANOS UN <span style="color:#25D366;">WHATSAPP</span> PARA CREAR TU CUENTA</h1>
 
-      <a class="whatsapp-button" href="https://wa.me/5493513283393?text=Hola,%20quiero%20mi%20usuario%20gratis%20y%20el%20bono%20de%20bienvenida!" target="_blank">
+      <a class="whatsapp-button" 
+         href="https://wa.link/landingsix" 
+         target="_blank" 
+         onclick="fbq('track', 'Contact');">
         PEDÍ TU USUARIO
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
       </a>
