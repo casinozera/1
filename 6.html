@@ -8,13 +8,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet" />
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1462345621814719');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-      user-select: none; /* 🔒 Bloqueo selección de texto */
+      user-select: none;
     }
 
     body {
@@ -113,7 +131,6 @@
   </style>
 
   <script>
-    // 🔒 Bloqueo de F12, clic derecho y combinaciones
     document.addEventListener("contextmenu", e => e.preventDefault());
 
     document.addEventListener("keydown", e => {
@@ -127,7 +144,6 @@
       }
     });
 
-    // 🔒 Bloqueo de Print Screen
     document.addEventListener("keyup", function(e) {
       if (e.key === "PrintScreen") {
         navigator.clipboard.writeText('');
@@ -135,10 +151,7 @@
       }
     });
 
-    // 🔒 Bloqueo de copiar
     document.addEventListener("copy", e => e.preventDefault());
-
-    // 🔒 Bloqueo de selección de texto
     document.addEventListener("selectstart", e => e.preventDefault());
   </script>
 </head>
@@ -148,8 +161,10 @@
     <img src="https://casinozera.com/images/logo.png?v=1741793124" alt="Logo CasinoZera">
     <h1>Juga con CasinoZera</h1>
     <p>Para crear tu cuenta, envíanos un WhatsApp haciendo click en el botón de abajo</p>
-    <a href="https://api.whatsapp.com/send?phone=5491130550463&text=¡Buenas!%20Me%20gustaría%20crear%20un%20usuario.%20Mi%20nombre%20es:"
-       class="cta-button" target="_blank">
+    <a href="https://wa.link/landingseven"
+       class="cta-button"
+       target="_blank"
+       onclick="fbq('track', 'Contact');">
       <i class='fab fa-whatsapp'></i> ¡Crea tu usuario!
     </a>
   </section>
