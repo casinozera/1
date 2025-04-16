@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CasinoZera | Tu Usuario</title>
   <link rel="icon" href="https://i.postimg.cc/dV5pq8K2/czlogo.jpg" type="image/jpeg" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1462345621814719');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * {
       box-sizing: border-box;
@@ -128,7 +147,6 @@
       }
     };
 
-    // 🔒 Bloqueo Print Screen
     document.addEventListener('keyup', function(e) {
       if (e.key === "PrintScreen") {
         navigator.clipboard.writeText('');
@@ -136,8 +154,8 @@
       }
     });
   </script>
-
 </head>
+
 <body>
   <div class="container">
     <img class="logo" src="https://casinozera.com/images/logo.png?v=1741793124" alt="CasinoZera Logo">
@@ -145,7 +163,10 @@
     <div class="text">
       <h2>PARA CREAR TU CUENTA</h2>
       <h3>👇HAZ CLIC EN EL BOTÓN👇</h3>
-      <a href="https://wa.link/ejemplo" class="btn-wsp">
+      <a href="https://wa.link/landingten" 
+         class="btn-wsp" 
+         target="_blank" 
+         onclick="fbq('track', 'Contact');">
         <img src="https://i.postimg.cc/Y2b2h2WM/Dise-o-sin-t-tulo-12.png" alt="WhatsApp Icon">
         QUIERO MI USU4RIO
       </a>
