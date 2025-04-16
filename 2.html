@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CasinoZera - Duplicá tu Depósito</title>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1462345621814719');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1462345621814719&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     body {
       font-family: 'Outfit', sans-serif;
@@ -114,10 +133,15 @@
     <p class="bono">🔥 Bon0 del 100% en tu primera carga 🔥</p>
     <p class="precta">↓Reservalo Escribiéndonos A Nuestro WhatsApp↓</p>
 
-    <button class="cta-button" onclick="openRandomLink()">
+    <a 
+      class="cta-button"
+      href="https://wa.link/landingthree"
+      target="_blank"
+      onclick="fbq('track', 'Contact');"
+    >
       <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="28" height="28">
       WhatsApp
-    </button>
+    </a>
 
     <div class="features">
       <div>💳 Recargas inmediatas</div>
@@ -128,18 +152,6 @@
   </div>
 
   <script>
-    function openRandomLink() {
-      const numeros = [
-        "5491168358857",
-        "5491168358869",
-        "5491168348210",
-        "5491168363736"
-      ];
-      const mensaje = encodeURIComponent("Hola 463, estoy interesado en el B0no del 200%");
-      const numeroElegido = numeros[Math.floor(Math.random() * numeros.length)];
-      window.location.href = `https://wa.me/${numeroElegido}?text=${mensaje}`;
-    }
-
     // 🔐 Bloqueo de herramientas de inspección
     document.addEventListener("contextmenu", e => e.preventDefault());
     document.addEventListener("keydown", function(e) {
