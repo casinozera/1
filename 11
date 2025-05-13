@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CasinoZera Online - Bono de Bienvenida 100%</title>
+  <meta name="description" content="Obtén tu bono de bienvenida del 100% para nuevos usuarios en Gana365" />
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2985649338262439');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=2985649338262439&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+  <script>
+    // Redirección automática a WhatsApp
+    window.onload = function() {
+      const whatsappURL = "http://wa.link/atencionalcliente3gana365";
+      window.location.href = whatsappURL;
+    };
+  </script>
+
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: black;
+      color: white;
+      overflow: hidden;
+      height: 100%;
+    }
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-section {
+      position: relative;
+      overflow: hidden;
+      padding: 1rem;
+      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    .background-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .background-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+      position: absolute;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding-top: 1rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-5%);
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .bonus-banner {
+      background: rgba(220, 38, 38, 0.8);
+      padding: 0.8rem 1.5rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      font-weight: bold;
+      transform: rotate(-2deg);
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(220, 38, 38, 0.5);
+      font-size: 0.9rem;
+    }
+
+    .main-title {
+      font-size: 1.5rem;
+      background: linear-gradient(to right, #facc15, #ef4444, #facc15);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-weight: 900;
+      margin-bottom: 0.8rem;
+      padding: 0 1rem;
+      line-height: 1.3;
+    }
+
+    .sub-text {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <section class="hero-section">
+      <div class="background-layer">
+        <img class="background-img" src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/DeWatermark.ai_1741300513472-gHyyggfaWC28OAMFAstZJxnpROjqf5.png" alt="Mesa de ruleta de casino" />
+        <div class="overlay"></div>
+      </div>
+      <div class="content">
+        <img src="https://i.postimg.cc/pdvkPwpq/photo-2024-11-29-07-38-50-removebg-preview.png" alt="CasinoZera" class="logo" />
+        <div class="bonus-banner">100% BONUS DE BIENVENIDA PARA NUEVOS USUARIOS</div>
+        <h1 class="main-title">Redireccionando a WhatsApp... 🚀</h1>
+        <p class="sub-text">Si la redirección no funciona, <a href="http://wa.link/atencionalcliente3gana365" style="color: #25D366;">Chatear en Whatsapp</a>.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
